@@ -19,7 +19,7 @@
         };
 
         spawn-at-startup = [
-          [ "${self'.packages.myNoctalia}/bin/noctalia-shell" ] # Correction: self'
+          [ (lib.getExe self'.packages.myNoctalia) ]
           [ "${pkgs.xwayland-satellite}/bin/xwayland-satellite" ]
         ];
 
