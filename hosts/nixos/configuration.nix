@@ -14,6 +14,7 @@
       self.nixosModules.gnome
       self.nixosModules.nix-settings
       self.nixosModules.local
+      self.nixosModules.flatpak
     ];
 
     # Bootloader & Kernel
