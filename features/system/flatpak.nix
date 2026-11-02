@@ -5,7 +5,6 @@
     
     environment.systemPackages = with pkgs; [
       gnome-software # Boutique graphique complète compatible Flathub
-      flatseal       # Gestion fine des permissions
     ];
 
     # Nécessaire pour que GNOME Software puisse demander les droits si besoin
