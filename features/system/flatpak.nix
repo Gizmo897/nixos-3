@@ -2,6 +2,14 @@
   flake.nixosModules.flatpak = { pkgs, ... }: {
     # Active le service Flatpak
     services.flatpak.enable = true;
+    
+    environment.systemPackages = with pkgs; [
+      gnome-software # Boutique graphique complète compatible Flathub
+      flatseal       # Gestion fine des permissions
+    ];
+
+    # Nécessaire pour que GNOME Software puisse demander les droits si besoin
+    security.polkit.enable = true;
 
     # Indispensable sous Niri/Wayland pour les boîtes de dialogue de fichiers et le partage d'écran
     xdg.portal = {
